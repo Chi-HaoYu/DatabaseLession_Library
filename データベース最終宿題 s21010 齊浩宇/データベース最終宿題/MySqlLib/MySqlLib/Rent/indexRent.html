@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+		<link rel="stylesheet" type="text/css" href="indexRent.css">
+		<title>Rental Page</title>
+	</head>
+
+	<body style="overflow: hidden;">
+		
+		<!--Top Bar-->
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../Book/indexBook.html">図書</a></li>
+			<li><a href="../User/indexUser.html">利用者</a></li>
+			<li><a href="indexRent.html">貸し</a></li>
+		</ul>
+
+		<!--Left Bar-->
+		<div id="leftBar">
+			<h1><div class="listBig">未返還履歴</div></h1>
+			<li><div class="listSmall" onclick="click1()">履歴を探す</div></li>
+			<li><div class="listSmall" onclick="click2()">履歴を加える</div></li>
+			<li><div class="listSmall" onclick="click3()">履歴を削る</div></li>
+			<li><div class="listSmall" onclick="click4()">未返還履歴</div></li>
+			<h1><div class="listBig">返還済み履歴</div></h1>
+			<li><div class="listSmall" onclick="click5()">履歴を探す</div></li>
+			<li><div class="listSmall" onclick="click6()">返還済み履歴</div></li>
+		</div>
+
+		<!--Center Area-->
+		<div id="mainBlock">
+			<div id="iframeBlock" name="mainBlock" frameborder="0" width="1200px" height="78%" marginheight="0" marginwidth="0"><iframe src='showRent.php'></iframe></div>
+		</div>
+
+		<!--Action of Left Bar-->
+		<script>
+			function click1() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='searchRent.html'></iframe>";
+			}
+			function click2() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='insertRent.html'></iframe>";
+			}
+			function click3() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='deleteRent.html'></iframe>";
+			}
+			function click4() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='showRent.php'></iframe>";
+			}
+			function click5() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='searchRentHis.html'></iframe>";
+			}
+			function click6() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='showRentHis.php'></iframe>";
+			}
+		</script>
+	</body>
+
+</html>

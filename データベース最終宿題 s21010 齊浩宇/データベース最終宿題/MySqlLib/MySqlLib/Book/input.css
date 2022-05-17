@@ -1,0 +1,27 @@
+input{
+	width: 400px;
+	height: 60px;
+	margin: 10px;
+	font-size: 24;
+}
+
+form{
+	font-size: 40;
+	color: white;
+}
+
+.main{
+	position: absolute;
+	left: 300px;
+	top: 80px;
+}
+
+.confirm{
+	width: 540px;
+	height: 80px;
+	position: absolute;
+	left: 0px;
+	font-size: 42;
+	background-color: #444;
+	color: white;
+}

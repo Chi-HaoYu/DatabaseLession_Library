@@ -1,0 +1,5 @@
+1,'BookName1','007.6.200','AuthorName1','1997年3月5日','PublisherName1','1997年2月5日','',2400.00 
+2,'BookName2','200.1.130','AuthorName2','1989年4月24日','PublisherName2','1989年2月24日','2019年2月24日',6400.00 
+3,'BookName3','336.1.8','AuthorName3','2005年4月30日','PublisherName3','2005年3月30日','',1800.00 
+4,'BookName4','412.17','AuthorName4','2010年7月22日','PublisherName4','2010年6月22日','',800.00 
+5,'BookName5','548.29.1','AuthorName5','2002年12月21日','PublisherName5','2002年11月21日',','',3300.00 

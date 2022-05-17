@@ -1,0 +1,236 @@
+-- MariaDB dump 10.19  Distrib 10.4.19-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: myLib
+-- ------------------------------------------------------
+-- Server version	10.4.19-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `TEST`
+--
+
+DROP TABLE IF EXISTS `TEST`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `TEST` (
+  `PPAP` int(11) NOT NULL AUTO_INCREMENT,
+  `AAPA` datetime DEFAULT current_timestamp(),
+  PRIMARY KEY (`PPAP`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `TEST`
+--
+
+LOCK TABLES `TEST` WRITE;
+/*!40000 ALTER TABLE `TEST` DISABLE KEYS */;
+INSERT INTO `TEST` VALUES (10,'2021-05-25 00:00:00'),(11,'2021-05-25 01:46:48'),(12,'2021-05-25 01:47:03');
+/*!40000 ALTER TABLE `TEST` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `book_info_m`
+--
+
+DROP TABLE IF EXISTS `book_info_m`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `book_info_m` (
+  `book_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `book_name` varchar(60) NOT NULL,
+  `book_ndc` varchar(20) DEFAULT NULL,
+  `book_author` varchar(60) DEFAULT NULL,
+  `book_price` float DEFAULT 1000,
+  PRIMARY KEY (`book_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `book_info_m`
+--
+
+LOCK TABLES `book_info_m` WRITE;
+/*!40000 ALTER TABLE `book_info_m` DISABLE KEYS */;
+INSERT INTO `book_info_m` VALUES (1,'C language. Start to GiveUp',NULL,NULL,1000),(6,'MySQL, Start to GiveUp',NULL,'',1000),(12,'PHP, Start to GiveUp',NULL,'',1000),(41,'Linux ,From Start To GiveUp','700.12.890','Me',2400),(44,'123earwerwe',NULL,'',1000);
+/*!40000 ALTER TABLE `book_info_m` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rent_his`
+--
+
+DROP TABLE IF EXISTS `rent_his`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rent_his` (
+  `rent_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `book_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `rent_date` datetime NOT NULL,
+  `return_deadline` date NOT NULL,
+  `return_date` datetime NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`rent_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rent_his`
+--
+
+LOCK TABLES `rent_his` WRITE;
+/*!40000 ALTER TABLE `rent_his` DISABLE KEYS */;
+INSERT INTO `rent_his` VALUES (7,1,16,'2021-05-25 13:01:15','2021-06-08','2021-05-25 13:23:06'),(8,1,17,'2021-05-25 13:33:58','2021-06-08','2021-05-25 13:34:02'),(9,1,17,'2021-05-25 13:34:24','2021-06-08','2021-05-25 13:34:44'),(10,6,16,'2021-05-25 13:34:33','2021-06-08','2021-05-25 13:34:45'),(11,1,17,'2021-05-25 13:35:26','2021-06-08','2021-05-25 13:55:13'),(12,12,17,'2021-05-25 13:55:25','2021-06-08','2021-05-25 13:55:36'),(13,1,16,'2021-05-25 17:06:00','2021-06-08','2021-05-25 17:06:05'),(14,1,16,'2021-05-25 17:06:12','2021-06-08','2021-05-25 17:06:17'),(15,12,17,'2021-05-25 17:06:28','2021-06-08','2021-05-29 15:39:49'),(16,1,16,'2021-05-29 15:23:19','2021-06-12','2021-05-29 15:39:50'),(17,6,16,'2021-05-29 15:39:38','2021-06-12','2021-05-29 15:39:50'),(18,1,16,'2021-05-29 15:39:58','2021-06-12','2021-05-29 15:46:37'),(19,6,17,'2021-05-29 15:40:18','2021-06-12','2021-05-29 15:46:35'),(20,12,16,'2021-05-15 00:00:00','2021-06-12','2021-05-29 15:46:36'),(21,1,16,'2021-05-15 00:00:00','2021-06-12','2021-05-29 15:47:47'),(23,44,83,'2021-05-29 20:29:04','2021-06-12','2021-05-29 20:37:13'),(24,44,83,'2021-05-29 20:37:38','2021-06-12','2021-05-29 20:44:01'),(25,44,83,'2021-05-29 20:44:13','2021-06-12','2021-06-05 01:06:32'),(26,12,16,'2021-05-29 20:59:28','2021-06-12','2021-05-29 21:00:13');
+/*!40000 ALTER TABLE `rent_his` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Temporary table structure for view `rent_his_v`
+--
+
+DROP TABLE IF EXISTS `rent_his_v`;
+/*!50001 DROP VIEW IF EXISTS `rent_his_v`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `rent_his_v` (
+  `rent_id` tinyint NOT NULL,
+  `book_name` tinyint NOT NULL,
+  `user_name` tinyint NOT NULL,
+  `rent_date` tinyint NOT NULL,
+  `return_deadline` tinyint NOT NULL,
+  `return_date` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Table structure for table `rent_info`
+--
+
+DROP TABLE IF EXISTS `rent_info`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rent_info` (
+  `rent_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `book_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `rent_date` datetime DEFAULT current_timestamp(),
+  `return_deadline` date DEFAULT (current_timestamp() + interval 14 day),
+  PRIMARY KEY (`rent_id`),
+  UNIQUE KEY `book_id` (`book_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rent_info`
+--
+
+LOCK TABLES `rent_info` WRITE;
+/*!40000 ALTER TABLE `rent_info` DISABLE KEYS */;
+INSERT INTO `rent_info` VALUES (22,1,16,'2021-05-15 00:00:00','2021-05-29'),(27,6,17,'2021-05-30 01:18:21','2021-06-13'),(28,41,17,'2021-06-05 01:15:18','2021-06-05');
+/*!40000 ALTER TABLE `rent_info` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Temporary table structure for view `rent_v`
+--
+
+DROP TABLE IF EXISTS `rent_v`;
+/*!50001 DROP VIEW IF EXISTS `rent_v`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `rent_v` (
+  `rent_id` tinyint NOT NULL,
+  `book_name` tinyint NOT NULL,
+  `user_name` tinyint NOT NULL,
+  `rent_date` tinyint NOT NULL,
+  `return_deadline` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Table structure for table `user_info`
+--
+
+DROP TABLE IF EXISTS `user_info`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_info` (
+  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(30) NOT NULL,
+  `user_phone` varchar(20) DEFAULT NULL,
+  `user_email` varchar(40) NOT NULL,
+  `user_address` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `user_email` (`user_email`),
+  UNIQUE KEY `user_phone` (`user_phone`)
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_info`
+--
+
+LOCK TABLES `user_info` WRITE;
+/*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
+INSERT INTO `user_info` VALUES (16,'齊浩宇','090-3972-9487','s21010@st.ac.kic.jp','我が家'),(17,'陳育玄','080-4497-0639','s20008@st.ac.kic.jp','彼の家'),(83,'333333','22222222','321321321','rerrtrt');
+/*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Final view structure for view `rent_his_v`
+--
+
+/*!50001 DROP TABLE IF EXISTS `rent_his_v`*/;
+/*!50001 DROP VIEW IF EXISTS `rent_his_v`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `rent_his_v` AS select `rent_his`.`rent_id` AS `rent_id`,`book_info_m`.`book_name` AS `book_name`,`user_info`.`user_name` AS `user_name`,`rent_his`.`rent_date` AS `rent_date`,`rent_his`.`return_deadline` AS `return_deadline`,`rent_his`.`return_date` AS `return_date` from ((`rent_his` join `book_info_m` on(`rent_his`.`book_id` = `book_info_m`.`book_id`)) join `user_info` on(`rent_his`.`user_id` = `user_info`.`user_id`)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `rent_v`
+--
+
+/*!50001 DROP TABLE IF EXISTS `rent_v`*/;
+/*!50001 DROP VIEW IF EXISTS `rent_v`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `rent_v` AS select `rent_info`.`rent_id` AS `rent_id`,`book_info_m`.`book_name` AS `book_name`,`user_info`.`user_name` AS `user_name`,`rent_info`.`rent_date` AS `rent_date`,`rent_info`.`return_deadline` AS `return_deadline` from ((`rent_info` join `book_info_m` on(`rent_info`.`book_id` = `book_info_m`.`book_id`)) join `user_info` on(`rent_info`.`user_id` = `user_info`.`user_id`)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-06-05  1:38:08

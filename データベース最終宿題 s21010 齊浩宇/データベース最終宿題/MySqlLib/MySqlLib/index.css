@@ -1,0 +1,189 @@
+body{
+	background: #2c2c2c;
+	overflow-x: hidden;
+}
+
+font{
+	color: #ffffff;
+	font-size: 40;
+}
+
+.word{
+	 color: white;
+	 font-size: 50;
+	 position: relative;
+	 left: 400px;
+	 margin-top: 50px; 
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: #333;
+	height: 50px;
+	width: all;
+}
+
+li a{
+	height: 50px;
+	width: 20%;
+	display: block;
+	margin: 0px 20px 0px 20px;
+	font-size: 30;
+	text-align: center;
+	color: white;
+	float: left;
+	text-decoration: none;
+}
+
+li a:hover{
+	background: #111;
+}
+
+iframe{
+	border: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	left: -8px;
+	top: 0px;
+	width: 1200px;
+	height: 90%;
+}
+
+table{
+	width: 1180px;
+	color: white;
+	background: #2c2c2c;
+	margin: 0;
+	padding: 0;
+}
+
+th{
+	padding:10px;
+	font-size: 32;
+	
+}
+
+td{
+	padding: 10px;
+	font-size: 20;
+}
+
+table, th, td{
+	border: 3px solid gray;
+}
+
+#iframeBlock{
+	margin-top: -5px;
+	position: relative;
+	style="z-index: 5;"
+}
+
+.Id{
+	width: 60px;
+}
+
+.Name{
+	width: 120px;
+}
+
+.Phone{
+	width: 160px;
+}
+
+.Email{
+	width: 240px;
+}
+
+#leftBar{
+	top: 60px;
+	height: 100%;
+	width: 300px;
+	background: #1f1f1f;
+	position: fixed;
+	left: -270px;
+	z-index: 100;
+	transition-duration: 0.4s;
+	padding: 0px;
+}
+
+#leftBar:hover{
+	left: 0px;
+	transition-duration: 0.4s;
+}
+
+#listTop{
+	float: left;
+}
+
+#listTop:hover{
+	background: #000000;
+}
+
+.listBig{
+	height: 60px;
+	width: auto;
+	background: #1f1f1f;
+	position: relative;
+	border: none;
+	color: #ffffff;
+	font-size: 40;
+	margin: 0px;
+	text-align: left;
+	z-index: 10;
+	padding-left: 15px;
+}
+
+.listBig:hover{
+	background: #2f2f2f;
+}
+
+.listSmall{
+	height: 50px;
+	width: all;
+	background: #1f1f1f;
+	position: relative;
+	color: #ffffff;
+	font-size: 30;
+	margin: 4px;
+	z-index: 5;
+	padding-left: 30px;
+}
+
+.listSmall:hover{
+	background: #2f2f2f;
+}
+
+#mainBlock{
+	left: 20px;
+	position: relative;
+	margin: 20px;
+	color: white;
+	width: 1200px;
+	z-index: 0;
+}
+
+.bigBotton{
+	position: absolute;
+	width: 400px;
+	height: 80px;
+	bottom: 100px;
+	left: 400px;
+	font-size: 42;
+	color: white;
+	background-color: #444;
+}
+
+.delBotton{
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 60px;
+	height: 40px;
+	margin: 0;
+	color: white;
+	background-color: #666;
+}

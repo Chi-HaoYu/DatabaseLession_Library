@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+		<link rel="stylesheet" type="text/css" href="indexUser.css">
+		<title>User Page</title>
+	</head>
+
+	<body style="overflow: hidden;">
+		
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../Book/indexBook.html">図書</a></li>
+			<li><a href="indexUser.html">利用者</a></li>
+			<li><a href="../Rent/indexRent.html">貸し</a></li>
+		</ul>
+
+		<div id="leftBar">
+			<h1><div class="listBig">利用者</div></h1>
+			<li><div class="listSmall" onclick="click1()">利用者を探す</div></li>
+			<li><div class="listSmall" onclick="click2()">利用者を加える</div></li>
+			<li><div class="listSmall" onclick="click3()">利用者を削る</div></li>
+			<li><div class="listSmall" onclick="click4()">利用者一覧</div></li>
+			<li><div class="listSmall" onclick="click5()">利用者改変</div></li>
+		</div>
+
+		<div id="mainBlock">
+			<div id="iframeBlock" name="mainBlock" frameborder="0" width="1200px" height="78%" marginheight="0" marginwidth="0"><iframe src='showUser.php'></iframe></div>
+		</div>
+
+		<script>
+			function click1() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='searchUser.html'></iframe>";
+			}
+			function click2() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='insertUser.html' style='position: relative; z-index: 1000; '></iframe>";
+			}
+			function click3() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='deleteUser.html'></iframe>";
+			}
+			function click4() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='showUser.php'></iframe>";
+			}
+			function click5() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='UpdateUser.html'></iframe>";
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<title>Home Page</title>
+	</head>
+
+	<body style="overflow: hidden;">
+		
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Book/indexBook.html">図書</a></li>
+			<li><a href="User/indexUser.html">利用者</a></li>
+			<li><a href="Rent/indexRent.html">貸し</a></li>
+		</ul>
+
+		<div id="leftBar">
+			<h1><div class="listBig">よく使う機能</div></h1>
+			<li><div class="listSmall" onclick="click1()">返還寸前一覧</div></li>
+			<li><div class="listSmall" onclick="click2()">本を貸す</div></li>
+			<li><div class="listSmall" onclick="click3()">本を返還する</div></li>
+<!--			<li><div class="listSmall" onclick="click4()">???</div></li>
+-->		</div>
+
+		<div id="mainBlock">
+			<div id="iframeBlock" name="mainBlock" frameborder="0" width="1200px" height="78%" marginheight="0" marginwidth="0"><iframe src='deadlineToday.php'></iframe></div>
+		</div>
+
+		<script>
+			function click1() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='deadlineToday.php'></iframe>";
+			}
+			function click2() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='Rent/insertRent.html' style='position: relative; z-index: 1000; '></iframe>";
+			}
+			function click3() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='Rent/deleteRent.html'></iframe>";
+			}
+			function click4() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src=''></iframe>";
+			}
+		</script>
+	</body>
+
+</html>

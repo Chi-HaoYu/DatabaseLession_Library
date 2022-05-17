@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+		<link rel="stylesheet" type="text/css" href="indexBook.css">
+		<title>Home Page</title>
+	</head>
+
+	<body style="overflow: hidden;">
+		
+		<!--Top Bar-->
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="indexBook.html">図書</a></li>
+			<li><a href="../User/indexUser.html">利用者</a></li>
+			<li><a href="../Rent/indexRent.html">貸し</a></li>
+		</ul>
+
+		<!--Left Bar-->
+		<div id="leftBar">
+			<h1><div class="listBig">図書</div></h1>
+			<li><div class="listSmall" onclick="click1()">本を探す</div></li>
+			<li><div class="listSmall" onclick="click2()">本を加える</div></li>
+			<li><div class="listSmall" onclick="click3()">本を削る</div></li>
+			<li><div class="listSmall" onclick="click4()">本棚はここに</div></li>
+			<li><div class="listSmall" onclick="click5()">資料変更</div></li>
+		</div>
+
+		<!--Center Area-->
+		<div id="mainBlock">
+			<div id="iframeBlock" name="mainBlock" frameborder="0" width="1200px" height="78%" marginheight="0" marginwidth="0"><iframe src='showBook.php'></iframe></div>
+		</div>
+
+		<!--Action of Left Bar-->
+		<script>
+			function click1() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='searchBook.html'></iframe>";
+			}
+			function click2() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='insertBook.html' style='position: relative; z-index: 1000; '></iframe>";
+			}
+			function click3() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='deleteBook.html'></iframe>";
+			}
+			function click4() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='showBook.php'></iframe>";
+			}
+			function click5() {
+				document.getElementById('iframeBlock').innerHTML = "<iframe src='UpdateBook.html'></iframe>";
+			}
+		</script>
+	</body>
+
+</html>
